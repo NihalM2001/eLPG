@@ -1,8 +1,8 @@
 
-package dis.eLPG.repository;
+package com.eLPG.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import dis.eLPG.entity.IndentDetails;
+import com.eLPG.entity.IndentDetails;
 
 
 public interface IndentRepository extends JpaRepository<IndentDetails, Integer>

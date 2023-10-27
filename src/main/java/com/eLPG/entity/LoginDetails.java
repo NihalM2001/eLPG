@@ -1,4 +1,4 @@
-package dis.eLPG.entity;
+package com.eLPG.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

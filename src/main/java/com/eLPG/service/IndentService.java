@@ -1,11 +1,11 @@
-package dis.eLPG.service;
+package com.eLPG.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dis.eLPG.entity.IndentDetails;
+import com.eLPG.entity.IndentDetails;
 
-import dis.eLPG.repository.IndentRepository;
+import com.eLPG.repository.IndentRepository;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;

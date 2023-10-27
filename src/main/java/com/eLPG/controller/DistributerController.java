@@ -1,4 +1,4 @@
-package dis.eLPG.controller;
+package com.eLPG.controller;
 
 
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import dis.eLPG.entity.IndentDetails;
+import com.eLPG.entity.IndentDetails;
 
-import dis.eLPG.service.IndentService;
+import com.eLPG.service.IndentService;
 
 
 
