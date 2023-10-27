@@ -18,7 +18,7 @@ public class ConsumerDetails
 	@Id
 	@GeneratedValue
 	private int consumerId;
-	private String fname, lname, city, distributorName, gender, email, address, username, password, dob;
+	private String fname, lname, location, distributorName, gender, email, address, username, password, dob;
 	private double aadhar, phone;
 	public int getConsumerId() {
 		return consumerId;
@@ -38,11 +38,11 @@ public class ConsumerDetails
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	public String getCity() {
-		return city;
+	public String getLocation() {
+		return location;
 	}
-	public void setCity(String city) {
-		this.city = city;
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	public String getDistributorName() {
 		return distributorName;

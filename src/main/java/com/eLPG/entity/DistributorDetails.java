@@ -18,7 +18,7 @@ public class DistributorDetails
 	@Id
 	@GeneratedValue
 	private int distributorId;
-	private String companyName, location, City, distUsername, distPassword;
+	private String companyName, location, distUsername, distPassword;
 	private double mobile, aadharNo;
 	public int getDistributorId() {
 		return distributorId;
@@ -37,12 +37,6 @@ public class DistributorDetails
 	}
 	public void setLocation(String location) {
 		this.location = location;
-	}
-	public String getCity() {
-		return City;
-	}
-	public void setCity(String city) {
-		City = city;
 	}
 	public String getDistUsername() {
 		return distUsername;

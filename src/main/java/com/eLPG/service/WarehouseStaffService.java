@@ -49,7 +49,6 @@ public class WarehouseStaffService
 		{
 			DistributorDetails d = new DistributorDetails();
 			d.setCompanyName(distributor.getCompanyName());
-			d.setCity(distributor.getCity());
 			d.setLocation(distributor.getLocation());
 			d.setDistUsername(distributor.getDistUsername());
 			d.setMobile(distributor.getMobile());

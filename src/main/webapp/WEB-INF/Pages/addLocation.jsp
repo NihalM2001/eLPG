@@ -343,44 +343,18 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
-      <div class="row">
-        <div class="col-lg-6">
-
-         <!-- <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>-->
-
-    <form class="row g-3">
+    <form class="row g-3 formLocation" action="/locSave" method="post">
         <div class="col-12">
-          <label for="inputNanme4" class="form-label">Enter New City</label>
-          <input type="text" class="form-control" id="inputNanme4">
+          <label for="inputNanme4" class="form-label">Enter New Location</label>
+          <input type="text" class="form-control" id="inputNanme4" name="location" style="width:400px">
         </div>
         <div class="col-12">
           <label for="inputEmail4" class="form-label">Enter State</label>
-          <input type="text" class="form-control" id="inputEmail4">
+          <input type="text" class="form-control" id="inputEmail4" name="state" style="width:400px">
         </div>
         <div class="col-12">
           <label for="inputPassword4" class="form-label">Enter Pincode</label>
-          <input type="text" class="form-control" id="inputPassword4">
+          <input type="text" class="form-control" id="inputPassword4" name="pincode" style="width:400px">
         </div>
         <div class="text-center">
           <button type="submit" class="btn btn-primary">Submit</button>

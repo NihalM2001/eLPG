@@ -348,7 +348,7 @@
         <thead>
           <tr>
             <th scope="col">Distributor ID</th>
-            <th scope="col">Company Name</th>
+            <th scope="col">Username</th>
             <th scope="col">Location</th>
             <th scope="col">Count</th>
             <th>Price</th>

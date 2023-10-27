@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,9 +34,18 @@ public class ConsumerController
 		return cService.bookCylinders(consDetails);
 	}
 	
-	@RequestMapping("/viewConsumer")
-	public List<ConsumerDetails> viewAllConusmer()
+	@GetMapping("/viewConsumer")
+	public String viewAllConusmer(Model m)
 	{
-		return cService.viewAllConsumer();
+		
+		List<ConsumerDetails> consList = cService.viewAllConsumer();
+		for (ConsumerDetails cd : consList)
+		{
+			System.out.println(cd.getDob());
+			System.out.println(cd.getDistributorName());
+			System.out.println(cd.getEmail());
+		}
+		m.addAttribute("cons",consList);
+		return "consumerDetails";
 	}
 }

@@ -361,10 +361,7 @@
         </select>
 
         <br>
-        
-        <label for="distributorID" class="col-sm-2 col-form-label">City</label> 
-        <input id="distributorID" class="form-control" type="text" placeholder="Enter City" aria-label="default input example">
-        
+         
         <label for="aadharNumber" class="col-sm-2 col-form-label">Aadhar Number:</label> 
         <input id="aadharNumber" class="form-control" type="text" placeholder="eg: xxxx-xxxx-xxxx-xxxx" aria-label="default input example">
 

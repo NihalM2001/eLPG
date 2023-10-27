@@ -13,7 +13,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Projects</title>
+   <title>Consumer Registration</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -193,9 +193,9 @@
             <input type="number" name="aadhar">
          </div>
 
-         <div class="city">
-            <label for="city">City:</label>
-            <select name="city" name="city" id="city">
+         <div class="location">
+            <label for="location">Location:</label>
+            <select name="location" id="location">
                <option value=""></option default>
                <option value="kakkanad">Kochi</option>
                <option value="edapally">Edapally</option>

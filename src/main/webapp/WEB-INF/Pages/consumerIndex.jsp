@@ -114,9 +114,9 @@
                                  <a href="contact.html">CONTACT US</a>
                               </div>
                            </div>
-                           <span  style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="images/toggle.png" class="toggle_menu"></span>
+                           <span style="font-size:33px;cursor:pointer; color: #ffffff;" onclick="openNav()"><img src="images/toggle.png" class="toggle_menu"></span>
                      </div>
-                     </li>
+                    
                      </ul>
                   </div>
                </div>
@@ -178,23 +178,18 @@
                            <br>
 
                            <label for="location">Select Location:</label>
-                           <select name="location">
+                           <select name="location" style="color:black;">
                               <option value="">Kochi</option>
                               <option value="">Kochi</option>
                               <option value="">Kochi</option>
                               <option value="">Kochi</option>
                               <option value="">Kochi</option>
                            </select>
-
                            
-                           <label for="distributors">Select Distributor:</label>
-                           <select name="distributors" id="distribution">
-                              <option value="">HP Gas</option>
-                              <option value="">HP Gas</option>
-                              <option value="">HP Gas</option>
-                              <option value="">HP Gas</option>
-                              <option value="">HP Gas</option>
-                           </select>
+                           <label for="dateofbooking">Date:</label>
+                           <br>
+						   <input type="date" name="dateofbooking" id="dateofbooking">
+						   <br>
                            <br>
                            <input type="submit" value="Book Cylinders"></input>
                         </form>
@@ -220,9 +215,8 @@
                   <thead>
                   <tr>
                      <th scope="col">Request ID</th>
-                     <th scope="col">User ID</th>
+                     <th scope="col">Date of Booking</th>
                      <th scope="col">Delivery Status</th>
-                     <th scope="col">Acknowledgement</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -230,19 +224,16 @@
                      <th scope="row">1</th>
                      <td>Mark</td>
                      <td>Otto</td>
-                     <td>@mdo</td>
                   </tr>
                   <tr>
                      <th scope="row">2</th>
                      <td>Jacob</td>
                      <td>Thornton</td>
-                     <td>@fat</td>
                   </tr>
                   <tr>
                      <th scope="row">3</th>
                      <td>Larry the Bird</td>
                      <td>@twitter</td>
-                     <td>Slim</td>
                   </tr>
                   </tbody>
                </table>
@@ -283,7 +274,7 @@
          <!-- footer section end -->
          <!-- copyright section start -->
          <div class="copyright_section">
-            <p class="copyright_text">Copyright 2020 All Right Reserved By.<a href="https://html.design"> Free  html Templates</p>
+            <p class="copyright_text">Copyright 2020 All Right Reserved By.<a href="https://html.design"> Free  html Templates</a></p>
          </div>
          <!-- copyright section end -->
          <!-- Javascript files-->

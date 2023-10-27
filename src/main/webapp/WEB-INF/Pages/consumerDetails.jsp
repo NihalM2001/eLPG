@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib  uri="jakarta.tags.core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -380,230 +381,43 @@
       <h1>Consumer Details</h1>
     </div><!-- End Page Title -->
 
-    <section class="section">
-      <div class="row">
-        <div class="col-lg-6">
-
-         <!-- <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-lg-6">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>-->
-
      <!-- Recent Sales -->
 
      <!-- Table with hoverable rows -->
      <table  class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col"> Consumer ID</th>
-          <th scope="col">First name</th>
+          <th scope="col">Consumer ID</th>
+          <th scope="col">Name</th>
           <th scope="col">Date Of Birth</th>
           <th scope="col">Aadhar Number</th>
           <th scope="col">Phone Number</th>
           <th scope="col">Gender</th>
           <th scope="col">Email</th>
           <th scope="col">Address</th>
-          <th scope="col">City</th>
+          <th scope="col">Location</th>
           <th scope="col">Username</th>
           <th scope="col">Password</th>
           <th scope="col">Date of Registration</th>
         </tr>
       </thead>
       <tbody>
+      <c:forEach var="con" items="${cons}">
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>${con.consumerId}</td>
+            <td>${con.fname}</td>
+            <td>${con.dob}</td>
+            <td>${con.aadhar}</td>
+            <td>${con.phone}</td>
+            <td>${con.gender}</td>
+            <td>${con.email}</td>
+            <td>${con.address}</td>
+            <td>${con.location}</td>
+            <td>${con.username}</td>
+            <td>${con.password}</td>
             <td></td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          
-        </tr>
-        <tr><td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td></tr>
-       
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    
-    
+   	  </c:forEach> 
       </tbody>
 
     </table>
