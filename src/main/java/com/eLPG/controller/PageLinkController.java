@@ -18,7 +18,7 @@ public class PageLinkController
 		return "consumerRegistration";
 	}
 	
-	@GetMapping("/")
+	@GetMapping("/startPage")
 	public String startPage()
 	{
 		return "startPage";
