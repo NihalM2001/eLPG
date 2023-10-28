@@ -1,5 +1,7 @@
 package com.eLPG.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +35,10 @@ public class LocationService
 	public void deleteLoc(int i)
 	{
 		locDetRepo.deleteById(i);
+	}
+	
+	public List<LocationDetails> viewAllLocation()
+	{
+		return locDetRepo.findAll();
 	}
 }

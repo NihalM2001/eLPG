@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>    
+
 <!--Profile-->
 <!--Maintain Locations-->
 <!DOCTYPE html>
@@ -366,45 +368,29 @@
           <tr>
             <th scope="col">Location ID</th>
             <th scope="col">Location</th>
-            <th scope="col">City</th>
             <th scope="col">State</th>
+            <th scope="col">Pincode</th>
             <th></th>
             <th></th>
           </tr>
         </thead>
+        
+        
         <tbody>
+        
+        <c:forEach var="i" items="${loc}">
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>${i.locationid}</td>
+            <td>${i.location}</td>
+            <td>${i.state}</td>
+            <td>${i.pincode}</td>
             <td><input type="submit" value="Edit"></td>
             <td><input type="submit" value="Delete"></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td><input type="submit" value="Edit"></td>
-            <td><input type="submit" value="Delete"></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td><input type="submit" value="Edit"></td>
-            <td><input type="submit" value="Delete"></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Niall</td>
-            <td>Horan</td>
-            <td>@Instagram</td>
-            <td><input type="submit" value="Edit"></td>
-            <td><input type="submit" value="Delete"></td>
-          </tr>
+        </c:forEach>
         </tbody>
+        
+        
       </table>
     </div>
 
