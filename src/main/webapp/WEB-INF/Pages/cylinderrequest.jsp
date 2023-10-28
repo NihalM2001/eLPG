@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    DOCTYPE html>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
+   <! DOCTYPE html>
 <html lang="en">
 
 <head>
+<meta charset="ISO-8859-1">
   <style>
     .dropbtn {
   background-color: #4CAF50;
@@ -12,6 +15,7 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
+ 
 }
 
 .dropdown {
@@ -54,6 +58,9 @@
   <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src =  
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+        </script> 
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -348,12 +355,12 @@
         </a>
       </li>
 
-      <li class="nav-item">
+     <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="/stattrack">
           <i class="bi bi-file-earmark"></i>
           <span>Status tracking</span>
         </a>
-      </li>
+      </li>-->
 
     </ul>
 
@@ -405,119 +412,61 @@
       <thead>
         <tr>
           <th scope="col">RequestID</th>
-          <th scope="col">User  ID</th>
           <th scope="col">Username</th>
           <th scope="col">Location</th>
           <th scope="col">Date of Request</th>
           <th scope="col"></th>
-          <th scope="col">Status</th>
-          
-
-          
-        
+          <th scope="col">Status</th>    
+          <th scope="col"></th> 
+          <th scope="col"></th> 
+          <th scope="col"></th> 
+             
         </tr>
+      
       </thead>
+      
+  
+      
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Brandon Jacob</td>
-          <td>Designer</td>
-          <td> <td>Brandon Jacob</td> </td>
-          <td><button >Approve</button></td>
+      <c:forEach var="con" items="${conReq}">
+        <tr id="rowdeleteagain">
+
+          <td>${con.requestId}</td>
+          <td>${con.username}</td>
+          <td>${con.location}</td>
+          <td>${con.date}</td>
+          
+          <td><a href="/mail" class="btn btn-primary">Approve</a></td>
           
           <td>
         
             <select id="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-              
-            </select></td> 
-          
+             <option value="">Order Received </option>
+              <option value="">Order Received </option>
+              <option value="">Shipped</option>
+              <option value="">Delivered</option>
+             
+            
+            </select>
+            </td>
+            <td><a href="/mailstatus" class="btn btn-primary">Send Status</a></td>
+          	 <td><a href="/mail" class="btn btn-primary" >+</a></td>
+            <td> <button onclick = "remove()">  
+                remove
+            </button>   </td>
           
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Bridie Kessler</td>
-          <td>Developer</td>
-          <td>35</td>
-          <td>2014-12-05</td>
-          <td><button >Approve</button></td>
-          
-          <td>
-        
-            <select id="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-              
-            </select></td> 
-        </tr> 
-        <tr>
-          <th scope="row">3</th>
-          <td>Ashleigh Langosh</td>
-          <td>Finance</td>
-          <td>45</td>
-          <td>2011-08-12</td>
-          <td><button >Approve</button></td>
-          
-          <td>
-        
-            <select id="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-              
-            </select></td> 
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Angus Grady</td>
-          <td>HR</td>
-          <td>34</td>
-          <td>2012-06-11</td>
-          <td><button >Approve</button></td>
-          
-          <td>
-        
-            <select id="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-              
-            </select></td> 
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Raheem Lehner</td>
-          <td>Dynamic Division Officer</td>
-          <td>47</td>
-          <td>2011-04-19</td>
-          <td><button >Approve</button></td>
-          
-          <td>
-        
-            <select id="cars">
-              <option value=""></option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
-              
-            </select></td> 
-        </tr>
+        </c:forEach>
     
       </tbody>
 
     </table>
+    
+     <script>  
+                function remove() { 
+                        $("#rowdeleteagain").remove(); 
+                } 
+            </script>
 
 
     <!--  <table  class="table table-bordered">

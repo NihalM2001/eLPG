@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,6 +55,9 @@
   <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src =  
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> 
+        </script> 
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -348,12 +352,12 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="/stattrack">
           <i class="bi bi-file-earmark"></i>
           <span>Status tracking</span>
         </a>
-      </li>
+      </li>-->
 
     </ul>
 
@@ -397,21 +401,27 @@
      <table  class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col">RequestID</th>
           <th scope="col">Username</th>
           <th scope="col">Location</th>
-          <th scope="col">Date of Registration</th>
+          <th scope="col">Aadhar no.</th>
+          <th scope="col">Phone no.</th>
           <th scope="col"></th>
           <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Brandon Jacob</td>
-          <td>Designer</td>
-          <td></td>
-          <td><button >Approve</button></td>
+      <c:forEach var="cns" items="${conf}">
+        <tr id="rowdelete">
+          <td>${cns.username}</td>
+          <td>${cns.location}</td>
+          <td>${cns.aadhar}</td>
+           <td>${cns.phone}</td>
+          <td><a href="/mail" class="btn btn-primary">Approve</a></td>
+          <td><a href="/mail" class="btn btn-primary">Disapprove</a></td>
           <td>
         
             <select id="cars">
@@ -421,78 +431,23 @@
               <option value="opel">Invalid Phone Number</option>
              
             </select></td>
+            <td><a href="deleteCustById/${cns.consumerId}">Delete</a></td>
+            
+          <!--   <td> <button onclick = "remove()">  
+                remove
+            </button>   </td>-->
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Bridie Kessler</td>
-          <td>Developer</td>
-          <td></td>
-          <td><button >Approve</button></td>
-          <td>
-        
-            <select id="cars">
-              <option value="">Reason to Disapprove:</option>
-              <option value="volvo">Incorrrect Details</option>
-              <option value="saab">Error in Aadhar Details</option>
-              <option value="opel">Invalid Phone Number</option>
-             
-            </select></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Ashleigh Langosh</td>
-          <td>Finance</td>
-          <td></td>
-          <td><button >Approve</button></td>
-          <td>
-        
-            <select id="cars">
-              <option value="">Reason to Disapprove:</option>
-              <option value="volvo">Incorrrect Details</option>
-              <option value="saab">Error in Aadhar Details</option>
-              <option value="opel">Invalid Phone Number</option>
-             
-            </select></td>
-         <td>
-        
-         </td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>Angus Grady</td>
-          <td>HR</td>
-          <td></td>
-          <td><button >Approve</button></td>
-          <td>
-        
-            <select id="cars">
-              <option value="">Reason to Disapprove:</option>
-              <option value="volvo">Incorrrect Details</option>
-              <option value="saab">Error in Aadhar Details</option>
-              <option value="opel">Invalid Phone Number</option>
-             
-            </select></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>Raheem Lehner</td>
-          <td>Dynamic Division Officer</td> 
-          <td></td>
-          <td><button >Approve</button></td>
-          <td>
-        
-            <select id="cars">
-              <option value="">Reason to Disapprove:</option>
-              <option value="volvo">Incorrrect Details</option>
-              <option value="saab">Error in Aadhar Details</option>
-              <option value="opel">Invalid Phone Number</option>
-             
-            </select></td>
-        </tr>
+        </c:forEach>
+       
     
       </tbody>
 
     </table>
+     <!-- <script>  
+                function remove() { 
+                        $("#rowdelete").remove(); 
+                } 
+            </script>-->
     
     <!-- End Table with hoverable rows -->
 

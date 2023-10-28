@@ -7,6 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -297,12 +298,12 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      <!--<li class="nav-item">
         <a class="nav-link collapsed" href="/stattrack">
           <i class="bi bi-file-earmark"></i>
           <span>Status tracking</span>
         </a>
-      </li>
+      </li>-->
 
 
 
@@ -343,14 +344,9 @@
                     </div>
 
                     <div class="ps-3" >
+                     <h6></h6>
+                      
                     
-                     <c:forEach var="logn" items="${log}">
-                     <tr>
-                     <td>${logn.password}</td>
-                     </tr>
-                     
-                     </c:forEach>
-                       
                       <!--<span class="text-success small pt-1 fw-bold"></span> <span class="text-muted small pt-2 ps-1"></span>-->
 
                     </div>
@@ -374,7 +370,7 @@
                       <i class="bi bi-currency-dollar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>$3,264</h6>
+                      <h6>800 Rs.</h6>
                      <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>-->
 
                     </div>

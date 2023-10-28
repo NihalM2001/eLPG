@@ -1,7 +1,8 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+
+
 <html lang="en">
 
 <head>
@@ -306,7 +307,7 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Indent Request</h1>
+     
       
     </div><!-- End Page Title -->
 
@@ -341,18 +342,20 @@
      <!-- Table with hoverable rows -->
      
 
-     <form class="row g-3"  action="/saveindent" method="post" >
-        <div class="col-12">
-          <label for="inputNanme4" class="form-label">Username</label>
-          <input type="text" class="form-control" name=username>
-        </div>
-        <div class="col-12">
-          <label for="inputEmail4" class="form-label">Cylinder count</label>
-          <input type="number" class="form-control" name=count >
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
+     <h2>Mail Form</h2>
+
+<form action="mailto:aiswaryaprakasan2000@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+Comment:<br>
+<input type="text" value="Request for Cylinder booking/User Registration is approved/disapproved" name="comment" size="70"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+     
+     
+     
+     
       </form><!-- Vertical Form -->
         </tr>
   
@@ -413,3 +416,22 @@
 </body>
 
 </html>
+<!-- <html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Mail Form</h2>
+
+<form action="mailto:aiswaryaprakasan2000@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+Comment:<br>
+<input type="text" value="this is approved" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+
+</body>
+</html>-->

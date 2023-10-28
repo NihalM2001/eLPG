@@ -170,25 +170,25 @@
                         <div class="bookingDetails"><h2>Enter your Booking Details</h2></div>
                         <br><br>
 
-                        <form action="" class="cylinderBooking">
+                        <form action="/bookCylinders" class="cylinderBooking">
                            Enter Username:
                            <br>
-                           <input type="text">
+                           <input type="text" name="username">
 
                            <br>
 
                            <label for="location">Select Location:</label>
                            <select name="location" style="color:black;">
-                              <option value="">Kochi</option>
-                              <option value="">Kochi</option>
-                              <option value="">Kochi</option>
-                              <option value="">Kochi</option>
-                              <option value="">Kochi</option>
+                              <option value="kochi">Kochi</option>
+                              <option value="kochi">Kochi</option>
+                              <option value="kalamassery">Kochi</option>
+                              <option value="edappally">Kochi</option>
+                              <option value="kakkanad">Kochi</option>
                            </select>
                            
                            <label for="dateofbooking">Date:</label>
                            <br>
-						   <input type="date" name="dateofbooking" id="dateofbooking">
+						   <input type="date" name="date" id="dateofbooking">
 						   <br>
                            <br>
                            <input type="submit" value="Book Cylinders"></input>

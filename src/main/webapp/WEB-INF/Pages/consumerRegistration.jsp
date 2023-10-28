@@ -190,7 +190,7 @@
 
          <div class="aadhar">
             <label for="aadhar">Aadhar No:</label>
-            <input type="number" name="aadhar">
+            <input type="text" name="aadhar">
          </div>
 
          <div class="location">

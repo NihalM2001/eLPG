@@ -13,28 +13,40 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class LoginDetails 
+public class LoginStaffDetails 
 {
 	@Id
 	@GeneratedValue
-	private int userid;
-	private String username,password;
-	public int getUserid() {
-		return userid;
+	private int staffid;
+	private String staffname,username,password;
+	public int getStaffid() {
+		return staffid;
 	}
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setStaffid(int staffid) 
+	{
+		this.staffid = staffid;
 	}
-	public String getUsername() {
+	public String getStaffname() {
+		return staffname;
+	}
+	public void setStaffname(String staffname) 
+	{
+		this.staffname = staffname;
+	}
+	public String getUsername() 
+	{
 		return username;
 	}
-	public void setUsername(String username) {
+	public void setUsername(String username) 
+	{
 		this.username = username;
 	}
-	public String getPassword() {
+	public String getPassword() 
+	{
 		return password;
 	}
-	public void setPassword(String password) {
+	public void setPassword(String password) 
+	{
 		this.password = password;
 	}
 	

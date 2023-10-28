@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import com.eLPG.entity.ConsumerDetails;
 import com.eLPG.entity.ConsumerRequest;
 import com.eLPG.repository.ConsumerDetailsRepository;
@@ -47,6 +48,11 @@ public class ConsumerService
 	{
 		return cReqRepo.save(conReq);
 	}
+	public List<ConsumerRequest> viewAllCust()
+	{
+		return cReqRepo.findAll();
+	}
+	
 	
 	public List<ConsumerDetails> viewAllConsumer()
 	{

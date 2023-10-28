@@ -18,8 +18,8 @@ public class ConsumerDetails
 	@Id
 	@GeneratedValue
 	private int consumerId;
-	private String fname, lname, location, distributorName, gender, email, address, username, password, dob;
-	private double aadhar, phone;
+	private String fname, lname, location, distributorName, gender, email, address, username, password, dob,aadhar, phone;
+	
 	public int getConsumerId() {
 		return consumerId;
 	}
@@ -80,23 +80,25 @@ public class ConsumerDetails
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public double getAadhar() {
-		return aadhar;
-	}
-	public void setAadhar(double aadhar) {
-		this.aadhar = aadhar;
-	}
-	public double getPhone() {
-		return phone;
-	}
-	public void setPhone(double phone) {
-		this.phone = phone;
-	}
+	
 	public String getDob() {
 		return dob;
 	}
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
+	public String getAadhar() {
+		return aadhar;
+	}
+	public void setAadhar(String aadhar) {
+		this.aadhar = aadhar;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
 	
 }

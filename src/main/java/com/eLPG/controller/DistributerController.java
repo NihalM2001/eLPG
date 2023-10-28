@@ -2,13 +2,17 @@ package com.eLPG.controller;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+
+import com.eLPG.entity.ConsumerRequest;
 import com.eLPG.entity.IndentDetails;
 
 import com.eLPG.service.IndentService;
@@ -20,6 +24,8 @@ public class DistributerController
 {
 	@Autowired
 	IndentService indservice;
+	
+	
 	
 	@GetMapping("/")
 	public String Consumer()
@@ -35,19 +41,22 @@ public class DistributerController
 		 return "redirect:/stattrack";
 		
 	}
-	
-
-	
-	@GetMapping("/cylreq")
-	public String custRequest()
+	@GetMapping("/home")
+	public String getHome()
 	{
-		return "cylinderrequest";
+		return "home";
 	}
 	
-	@GetMapping("/custregister")
-	public String custRegister()
+	@GetMapping("/mail")
+	public String sendmail()
 	{
-		return "customerregistration";
+		return "Mailformapproval";
+	}
+	
+	@GetMapping("/mailstatus")
+	public String sendmailstatus()
+	{
+		return "Mailformcommon";
 	}
 	
 	@GetMapping("/stattrack")

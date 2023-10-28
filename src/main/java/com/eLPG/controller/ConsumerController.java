@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,7 @@ public class ConsumerController
 {
 	@Autowired
 	ConsumerService cService;	
-
+	
 	@PostMapping("/saveConsumer")
 	public String regConsumer(@ModelAttribute("consumer") ConsumerDetails consumer)
 	{
@@ -28,24 +29,48 @@ public class ConsumerController
 		return "redirect:/consumerLogin";
 	}
 	
-	@RequestMapping("/bookCylinders")
-	public ConsumerRequest bookCylinders(@RequestBody ConsumerRequest consDetails)
+	@GetMapping("/bookCylinders")
+	public String bookCylinders(@ModelAttribute("conReq") ConsumerRequest conReq)
 	{
-		return cService.bookCylinders(consDetails);
+		cService.bookCylinders(conReq);
+		return "consumerIndex";
+	}
+	
+	@GetMapping("/cylreq")
+	public String viewAllCylReq(Model m)
+	{
+		List<ConsumerRequest> custlist= cService.viewAllCust();
+		for (ConsumerRequest cr : custlist)
+		{
+			System.out.println(cr.getDate());
+			System.out.println(cr.getRequestId());
+		}
+		m.addAttribute("conReq",custlist);
+		return "cylinderrequest";
+		
 	}
 	
 	@GetMapping("/viewConsumer")
 	public String viewAllConusmer(Model m)
 	{
-		
 		List<ConsumerDetails> consList = cService.viewAllConsumer();
-		for (ConsumerDetails cd : consList)
-		{
-			System.out.println(cd.getDob());
-			System.out.println(cd.getDistributorName());
-			System.out.println(cd.getEmail());
-		}
 		m.addAttribute("cons",consList);
 		return "consumerDetails";
 	}
+	
+	@GetMapping("/custregister")
+	public String registerDetails(Model m)
+	{
+		List<ConsumerDetails> confList = cService.viewAllConsumer();
+		m.addAttribute("conf",confList);
+		return "customerregistration";
+	}
+	
+	@GetMapping("/deleteCustById/{id}")
+	public String deleteCustById(@PathVariable int id)
+	{
+		cService.deleteConsumer(id);
+		return "redirect:/custregister";
+	}
+	
 }
