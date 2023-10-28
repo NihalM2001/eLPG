@@ -33,11 +33,11 @@ public class LocationController
 		locService.deleteLoc(i);
 	}
 	
-	@GetMapping("/viewAllLoc")
+	@GetMapping("/maintainLocation")
 	public String viewAllLocations(Model m)
 	{
 		List<LocationDetails> viewLoc = locService.viewAllLocation();
 		m.addAttribute("loc",viewLoc);
-		return "maintainLocation";
+		return "maintainLocations";
 	}
 }

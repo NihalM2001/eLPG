@@ -66,11 +66,11 @@ public class PageLinkController
 		return "maintainDistributorIndent";
 	}
 
-	@GetMapping("/maintainLocation")
+	/*@GetMapping("/maintainLocation")
 	public String maintainLocations()
 	{
 		return "maintainLocations";
-	}
+	}*/
 
 	@GetMapping("/addNewDistributor")
 	public String addNewDistributor()

@@ -417,8 +417,7 @@
           <th scope="col">Date of Request</th>
           <th scope="col"></th>
           <th scope="col">Status</th>    
-          <th scope="col"></th> 
-          <th scope="col"></th> 
+          <th scope="col"></th>  
           <th scope="col"></th> 
              
         </tr>
@@ -450,7 +449,6 @@
             </select>
             </td>
             <td><a href="/mailstatus" class="btn btn-primary">Send Status</a></td>
-          	 <td><a href="/mail" class="btn btn-primary" >+</a></td>
             <td> <button onclick = "remove()">  
                 remove
             </button>   </td>
