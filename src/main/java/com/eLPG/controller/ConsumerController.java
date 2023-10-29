@@ -48,7 +48,7 @@ public class ConsumerController
 		
 	}
 	
-	@GetMapping("/viewConsumer")
+	@GetMapping("/viewAllConsumer")
 	public String viewAllConusmer(Model m)
 	{
 		List<ConsumerDetails> consList = cService.viewAllConsumer();

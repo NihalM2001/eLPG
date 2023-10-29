@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+  
 
 <!--Blank-->
 <!--Add new Distributor-->  
@@ -347,13 +348,13 @@
     </div><!-- End Page Title -->
 
     <div class="form">
-      <form action="">
+      <form action="saveDist" method="post">
 
         <label for="distributorID" class="col-sm-2 col-form-label">Company Name:</label> 
-        <input id="distributorID" class="form-control" type="text" placeholder="eg: Sharon Agencies" aria-label="default input example">
+        <input id="distributorID" name="companyName" class="form-control" type="text" placeholder="eg: Sharon Agencies" aria-label="default input example">
         
         <label for="location" class="col-sm-2 col-form-label">Location:</label> <br>
-        <select name="locations" id="location">
+        <select name="location" id="location">
           <option value=""></option>
           <option value="">Kalamassery</option>
           <option value="">Kakkanad</option>
@@ -363,16 +364,16 @@
         <br>
          
         <label for="aadharNumber" class="col-sm-2 col-form-label">Aadhar Number:</label> 
-        <input id="aadharNumber" class="form-control" type="text" placeholder="eg: xxxx-xxxx-xxxx-xxxx" aria-label="default input example">
+        <input id="aadharNumber" name="aadharNo" class="form-control" type="text" placeholder="eg: xxxx-xxxx-xxxx-xxxx" aria-label="default input example">
 
         <label for="mobile" class="col-sm-2 col-form-label">Mobile Number:</label> 
-        <input id="mobile" class="form-control" type="text" placeholder="Enter your Mobile Number" aria-label="default input example">
+        <input id="mobile"  name="mobile" class="form-control" type="text" placeholder="Enter your Mobile Number" aria-label="default input example">
 
         <label for="username" class="col-sm-2 col-form-label">Username:</label> 
-        <input id="username" class="form-control" type="text" placeholder="eg: RottenTomatoes" aria-label="default input example">
+        <input id="username" name="distUsername" class="form-control" type="text" placeholder="eg: RottenTomatoes" aria-label="default input example">
         
         <label for="distributorPass" class="col-sm-2 col-form-label">Password:</label> 
-        <input id="distributorPass" class="form-control" type="password" placeholder="Enter Password" aria-label="default input example">
+        <input id="distributorPass" name="distPassword" class="form-control" type="password" placeholder="Enter Password" aria-label="default input example">
         <br>
         
         <input id="distributorPass" class="form-control" type="submit" aria-label="default input example" style="width: 10%; background-color: #1a73e8; color: white;">

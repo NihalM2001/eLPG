@@ -54,11 +54,13 @@ public class PageLinkController
 		return "addLocation";
 	}
 
+	/*
 	@GetMapping("/maintainDistributor")
 	public String maintainDistributor()
 	{
 		return "maintainDistributor";
 	}
+	*/
 
 	@GetMapping("/maintainDistributorIndent")
 	public String maintainDistributorIndent()
@@ -78,9 +80,11 @@ public class PageLinkController
 		return "addNewDistributor";
 	}
 	
+	/*
 	@GetMapping("/viewAllConsumer")
 	public String viewAllConsumer()
 	{
 		return "consumerDetails";
 	}
+	*/
 }

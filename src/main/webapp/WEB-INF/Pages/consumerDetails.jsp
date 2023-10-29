@@ -398,7 +398,6 @@
           <th scope="col">Location</th>
           <th scope="col">Username</th>
           <th scope="col">Password</th>
-          <th scope="col">Date of Registration</th>
         </tr>
       </thead>
       <tbody>
@@ -415,7 +414,6 @@
             <td>${con.location}</td>
             <td>${con.username}</td>
             <td>${con.password}</td>
-            <td></td>
         </tr>
    	  </c:forEach> 
       </tbody>

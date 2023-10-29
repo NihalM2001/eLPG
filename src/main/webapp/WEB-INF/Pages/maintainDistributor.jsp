@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>  
 <!--F.A.Q-->
 <!--Maintain Distributor-->
 
@@ -372,7 +373,7 @@
             <th scope="col">Distributor ID</th>
             <th scope="col">Company Name</th>
             <th scope="col">Location</th>
-            <th scope="col">City</th>
+            <th scope="col">Mobile</th>
             <th>Username</th>
             <th>Password</th>
             <th></th>
@@ -380,45 +381,18 @@
           </tr>
         </thead>
         <tbody>
+        <c:forEach var="dists" items="${dist}">
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" value="Edit"></td>
+            <td>${dists.distributorId}</td>
+            <td>${dists.companyName}</td>
+            <td>${dists.location}</td>
+            <td>${dists.mobile}</td>
+            <td>${dists.aadharNo}</td>
+            <td>${dists.distUsername}</td>
+            <td>${dists.distPassword}</td>
             <td><input type="submit" value="Delete"></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" value="Edit"></td>
-            <td><input type="submit" value="Delete"></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" value="Edit"></td>
-            <td><input type="submit" value="Delete"></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Niall</td>
-            <td>Horan</td>
-            <td>@Instagram</td>
-            <td></td>
-            <td></td>
-            <td><input type="submit" value="Edit"></td>
-            <td><input type="submit" value="Delete"></td>
-          </tr>
+        </c:forEach>
         </tbody>
       </table>
     </div>

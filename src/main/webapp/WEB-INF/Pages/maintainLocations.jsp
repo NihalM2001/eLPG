@@ -384,7 +384,6 @@
             <td>${i.location}</td>
             <td>${i.state}</td>
             <td>${i.pincode}</td>
-            <td><input type="submit" value="Edit"></td>
             <td><input type="submit" value="Delete"></td>
           </tr>
         </c:forEach>
