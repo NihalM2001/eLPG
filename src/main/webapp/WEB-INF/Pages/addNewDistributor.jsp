@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-  
+ 
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>  
 
 <!--Blank-->
 <!--Add new Distributor-->  
@@ -356,9 +357,9 @@
         <label for="location" class="col-sm-2 col-form-label">Location:</label> <br>
         <select name="location" id="location">
           <option value=""></option>
-          <option value="">Kalamassery</option>
-          <option value="">Kakkanad</option>
-          <option value="">Edapally</option>
+          <c:forEach var="locs" items="${loc}">
+          	<option value="">${locs.location}</option>
+          </c:forEach>
         </select>
 
         <br>

@@ -3,6 +3,7 @@ package com.eLPG.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.eLPG.entity.DistributorDetails;
 import com.eLPG.service.WarehouseStaffService;
 
-@RestController
+@Controller
 public class StaffController
 {
 	@Autowired

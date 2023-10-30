@@ -41,4 +41,9 @@ public class LocationService
 	{
 		return locDetRepo.findAll();
 	}
+	
+	public List<LocationDetails> findLocation()
+	{
+		return locDetRepo.findLocation();
+	}
 }

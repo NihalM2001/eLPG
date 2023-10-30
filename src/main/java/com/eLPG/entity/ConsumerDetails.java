@@ -20,6 +20,11 @@ public class ConsumerDetails
 	private int consumerId;
 	private String fname, lname, location, distributorName, gender, email, address, username, password, dob,aadhar, phone;
 	
+	public ConsumerDetails(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
 	public int getConsumerId() {
 		return consumerId;
 	}

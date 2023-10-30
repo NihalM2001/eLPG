@@ -40,4 +40,17 @@ public class LocationController
 		m.addAttribute("loc",viewLoc);
 		return "maintainLocations";
 	}
+	
+	@GetMapping("/findLocation")
+	public String findLocations(Model m)
+	{
+		List<LocationDetails> locDet = locService.findLocation();
+		m.addAttribute("loc",locDet);
+		for (LocationDetails lds : locDet) {
+			System.out.println("1");
+			System.out.println(lds.getLocation());
+		}
+		return "maintainLocations";
+	}
+	
 }

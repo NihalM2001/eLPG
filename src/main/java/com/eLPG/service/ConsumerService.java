@@ -58,4 +58,12 @@ public class ConsumerService
 	{
 		return cDetailRepo.findAll();
 	}
+	
+	public String login(ConsumerDetails cd)
+	{
+		System.out.println("hello");
+		String flag = cDetailRepo.loginConsumer(cd.getUsername(),cd.getPassword());
+		System.out.println(flag);
+		return flag;
+	}
 }

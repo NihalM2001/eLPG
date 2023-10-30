@@ -71,4 +71,20 @@ public class ConsumerController
 		return "redirect:/custregister";
 	}
 	
+	@PostMapping("/login")
+	public String login(@ModelAttribute("c") ConsumerDetails c)
+	{
+		System.out.println(c.getUsername()+"\t"+c.getPassword());
+		
+		String flag = cService.login(c);
+		if(flag!=null)
+		{
+			return "consumerIndex";
+		}
+		
+		return "consumerLogin";
+		
+		
+	}
+	
 }
