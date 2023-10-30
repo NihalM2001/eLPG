@@ -387,7 +387,7 @@
 
                 
 
-                <div class="card-body" >
+                <div class="card-body" w>
                   <h5 class="card-title">Role: </h5>
 
                   <div class="d-flex align-items-center">
