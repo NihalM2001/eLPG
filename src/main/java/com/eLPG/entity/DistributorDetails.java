@@ -20,6 +20,7 @@ public class DistributorDetails
 	private int distributorId;
 	private String companyName, location, distUsername, distPassword;
 	private double mobile, aadharNo;
+	private int count;
 	public int getDistributorId() {
 		return distributorId;
 	}
@@ -61,6 +62,12 @@ public class DistributorDetails
 	}
 	public void setAadharNo(double aadharNo) {
 		this.aadharNo = aadharNo;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
 	}	
 	
 	
