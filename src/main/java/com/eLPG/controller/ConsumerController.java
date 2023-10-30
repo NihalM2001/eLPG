@@ -27,7 +27,7 @@ public class ConsumerController
 		return "redirect:/consumerLogin";
 	}
 	
-	@GetMapping("/bookCylinders")
+	@PostMapping("/bookCylinders")
 	public String bookCylinders(@ModelAttribute("conReq") ConsumerRequest conReq)
 	{
 		cService.bookCylinders(conReq);

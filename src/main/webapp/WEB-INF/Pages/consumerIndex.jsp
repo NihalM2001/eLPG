@@ -170,7 +170,7 @@
                         <div class="bookingDetails"><h2>Enter your Booking Details</h2></div>
                         <br><br>
 
-                        <form action="/bookCylinders" class="cylinderBooking">
+                        <form action="/bookCylinders" class="cylinderBooking" method="post">
                            Enter Username:
                            <br>
                            <input type="text" name="username">
