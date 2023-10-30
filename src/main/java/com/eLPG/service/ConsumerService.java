@@ -47,6 +47,7 @@ public class ConsumerService
 	public ConsumerRequest bookCylinders(ConsumerRequest conReq)
 	{
 		return cReqRepo.save(conReq);
+		
 	}
 	public List<ConsumerRequest> viewAllCust()
 	{
@@ -58,6 +59,8 @@ public class ConsumerService
 	{
 		return cDetailRepo.findAll();
 	}
+	
+
 	
 	public String login(ConsumerDetails cd)
 	{

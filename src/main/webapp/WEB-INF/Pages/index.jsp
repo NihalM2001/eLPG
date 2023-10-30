@@ -298,12 +298,12 @@
         </a>
       </li>
 
-      <!--<li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="/stattrack">
           <i class="bi bi-file-earmark"></i>
           <span>Status tracking</span>
         </a>
-      </li>-->
+      </li>
 
 
 
@@ -387,15 +387,15 @@
 
                 
 
-                <div class="card-body">
-                  <h5 class="card-title">Registered Customers </h5>
+                <div class="card-body" w>
+                  <h5 class="card-title">Role: </h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>1244</h6>
+                      <h6>Distributor</h6>
                      <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>-->
 
                     </div>

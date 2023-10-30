@@ -9,4 +9,6 @@ public interface ConsumerDetailsRepository extends JpaRepository<ConsumerDetails
 {
 	@Query(value = "select * from consumer_details where username=?1 and password=?2", nativeQuery=true)
 	public String loginConsumer(String username, String password);
+	
+	
 }
