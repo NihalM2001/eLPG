@@ -74,6 +74,12 @@ public class DistributerController
 		return "indentform";
 	}
 	
+	@GetMapping("/quote")
+	public String quotes()
+	{
+		return "quote";
+	}
+	
 	@PostMapping("/saveDist")
 	public String saveDistributor(@ModelAttribute("saveDist") DistributorDetails saveDist)
 	{

@@ -347,23 +347,22 @@
       striped">
         <thead>
           <tr>
-            <th scope="col">Distributor ID</th>
+            
             <th scope="col">Username</th>
             <th scope="col">Location</th>
             <th scope="col">Count</th>
-            <th>Price</th>
             <th style="text-align:center;">Status</th>
             <th></th>
-            <th></th>
+            
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
+
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
-            <td></td>
+             
             <td>
               <select name="status" id="">
                 <option value=""></option>
@@ -373,59 +372,8 @@
               </select>
             </td>
             <td><input type="submit" value="Approve"></td>
-            <td><input type="submit" value="Disapprove"></td>
+            
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td></td>
-            <td>
-              <select name="status" id="">
-                <option value=""></option>
-                <option value="">Order Confirmed</option>
-                <option value="">Shipped</option>
-                <option value="">Delivered</option>
-              </select>
-            </td>
-            <td><input type="submit" value="Approve"></td>
-            <td><input type="submit" value="Disapprove"></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            <td></td>
-            <td>
-              <select name="status" id="">
-                <option value=""></option>
-                <option value="">Order Confirmed</option>
-                <option value="">Shipped</option>
-                <option value="">Delivered</option>
-            </td>
-            <td><input type="submit" value="Approve"></td>
-            <td><input type="submit" value="Disapprove"></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Niall</td>
-            <td>Horan</td>
-            <td>@Instagram</td>
-            <td></td>
-            <td>
-              <select name="status" id="">
-                <option value=""></option>
-                <option value="">Order Confirmed</option>
-                <option value="">Shipped</option>
-                <option value="">Delivered</option>
-            </td>
-            <td><input type="submit" value="Approve"></td>
-            <td><input type="submit" value="Disapprove"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
 
 
   </main><!-- End #main -->

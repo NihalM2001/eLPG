@@ -62,7 +62,7 @@ public class PageLinkController
 	}
 	*/
 
-	@GetMapping("/maintainDistributorIndent")
+	/*@GetMapping("/maintainDistributorIndent")
 	public String maintainDistributorIndent()
 	{
 		return "maintainDistributorIndent";

@@ -346,6 +346,11 @@
           <label for="inputNanme4" class="form-label">Username</label>
           <input type="text" class="form-control" name=username>
         </div>
+        
+        <div class="col-12">
+          <label for="inputNanme4" class="form-label">Location</label>
+          <input type="text" class="form-control" name=username>
+        </div>
         <div class="col-12">
           <label for="inputEmail4" class="form-label">Cylinder count</label>
           <input type="number" class="form-control" name=count >

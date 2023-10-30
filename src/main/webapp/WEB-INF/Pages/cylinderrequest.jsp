@@ -434,7 +434,6 @@
           <td>${con.username}</td>
           <td>${con.location}</td>
           <td>${con.date}</td>
-          
           <td><a href="/mail" class="btn btn-primary">Approve</a></td>
           
           <td>

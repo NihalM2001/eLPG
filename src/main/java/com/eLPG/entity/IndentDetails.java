@@ -18,7 +18,7 @@ public class IndentDetails
 	@Id
 	@GeneratedValue
 	private int distributerid;
-	private String username;
+	private String username,location;
 	private int count;
 	public int getDistributerid() {
 		return distributerid;
@@ -37,6 +37,12 @@ public class IndentDetails
 	}
 	public void setCount(int count) {
 		this.count = count;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	
 	
