@@ -390,7 +390,7 @@
             <td>${dists.aadharNo}</td>
             <td>${dists.distUsername}</td>
             <td>${dists.distPassword}</td>
-            <td><input type="submit" value="Delete"></td>
+            <td><a href="deleteDist/{i}"><input type="submit" value="Delete"></a></td>
           </tr>
         </c:forEach>
         </tbody>

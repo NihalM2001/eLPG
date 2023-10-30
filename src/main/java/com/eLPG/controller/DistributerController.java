@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -100,6 +101,25 @@ public class DistributerController
 		List<IndentDetails> indlist= indservice.viewAllindent();
 		m.addAttribute("ind",indlist);
 		return "maintainDistributorIndent";
+	}
+	
+	@PostMapping("/distLogin")
+	public String loginDistributor(@ModelAttribute("dd") DistributorDetails dd)
+	{
+		System.out.println(dd.getDistUsername()+"\t"+dd.getDistPassword());
 		
+		String flag = distService.loginDist(dd);
+		if(flag!=null)
+		{
+			return "index";
+		}
+		return "distributorLogin";
+	}
+	
+	@GetMapping("/deleteDist/{i}")
+	public String deleteDistributor(@PathVariable int i)
+	{
+		distService.deleteDist(i);
+		return "maintainDistributor";
 	}
 }

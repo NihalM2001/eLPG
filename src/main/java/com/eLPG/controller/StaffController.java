@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.eLPG.entity.DistributorDetails;
+import com.eLPG.entity.LoginStaffDetails;
 import com.eLPG.service.WarehouseStaffService;
 
 @Controller
@@ -43,6 +45,20 @@ public class StaffController
 		return "redirect:/viewDist";
 	}
 	*/
+	
+	@PostMapping("/staffLogin")
+	public String staffLogin(LoginStaffDetails lsd)
+	{
+		System.out.println(lsd.getUsername()+  "\t" + lsd.getPassword());
+		
+		String flag = staffService.loginStaff(lsd);
+		if(flag!=null)
+		{
+			return "warehouseStaffDashboard";
+		}
+		
+		return "warehouseStaffLogin";
+	}
 	
 	
 }

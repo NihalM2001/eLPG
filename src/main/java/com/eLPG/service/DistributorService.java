@@ -36,4 +36,17 @@ public class DistributorService
 	{
 		return distDetRepo.findAll();
 	}
+	
+	public String loginDist(DistributorDetails dd)
+	{
+		System.out.println("hello");
+		String flag = distDetRepo.loginDistributor(dd.getDistUsername(),dd.getDistPassword());
+		System.out.println(flag);
+		return flag;
+	}
+	
+	public void deleteDist(int i)
+	{
+		distDetRepo.deleteById(i);
+	}
 }

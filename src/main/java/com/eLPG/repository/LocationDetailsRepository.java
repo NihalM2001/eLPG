@@ -10,5 +10,5 @@ import com.eLPG.entity.LocationDetails;
 public interface LocationDetailsRepository extends JpaRepository<LocationDetails, Integer>
 {
 	@Query(value = "select location from location_details", nativeQuery = true)
-	public List<LocationDetails> findLocation();
+	public List<String> findLocation();
 }

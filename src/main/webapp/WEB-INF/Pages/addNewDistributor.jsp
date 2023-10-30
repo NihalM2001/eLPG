@@ -355,7 +355,7 @@
         <input id="distributorID" name="companyName" class="form-control" type="text" placeholder="eg: Sharon Agencies" aria-label="default input example">
         
         <label for="location" class="col-sm-2 col-form-label">Location:</label> <br>
-        <select name="location" id="location">
+        <select name="location" id="location" onclick="findLocation">
           <option value=""></option>
           <c:forEach var="locs" items="${loc}">
           	<option value="">${locs.location}</option>

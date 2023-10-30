@@ -42,7 +42,7 @@ public class LocationService
 		return locDetRepo.findAll();
 	}
 	
-	public List<LocationDetails> findLocation()
+	public List<String> findLocation()
 	{
 		return locDetRepo.findLocation();
 	}

@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.eLPG.entity.DistributorDetails;
+import com.eLPG.entity.LoginStaffDetails;
 import com.eLPG.repository.DistributorDetailsRepository;
+import com.eLPG.repository.LoginStaffRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,6 +29,9 @@ public class WarehouseStaffService
 	@Autowired
 	DistributorDetailsRepository distDetRepo;
 	
+	@Autowired
+	LoginStaffRepository logStaffRepo;
+		
 	public DistributorDetails registerDist(DistributorDetails distributor)
 	{
 		return distDetRepo.save(distributor);
@@ -57,4 +62,12 @@ public class WarehouseStaffService
 		}
 	}
 	
+
+	public String loginStaff(LoginStaffDetails lsd)
+	{
+		System.out.println("helo");
+		String flag = logStaffRepo.loginStaff(lsd.getUsername(), lsd.getPassword());
+		System.out.println(flag);
+		return flag;
+	}
 }
