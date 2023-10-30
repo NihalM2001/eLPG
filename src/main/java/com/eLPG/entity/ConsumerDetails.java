@@ -11,7 +11,6 @@ import lombok.ToString;
 @Entity
 @ToString
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 public class ConsumerDetails
 {
@@ -20,6 +19,9 @@ public class ConsumerDetails
 	private int consumerId;
 	private String fname, lname, location, distributorName, gender, email, address, username, password, dob,aadhar, phone;
 	
+	public ConsumerDetails() {
+		super();
+	}
 	public ConsumerDetails(String username, String password) {
 		super();
 		this.username = username;
