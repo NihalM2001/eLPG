@@ -94,5 +94,12 @@ public class DistributerController
 		m.addAttribute("dist",distributors);
 		return "maintainDistributor";		
 	}
-	
+	@GetMapping("/maintainDistributorIndent")
+	public String viewAllCust(Model m)
+	{
+		List<IndentDetails> indlist= indservice.viewAllindent();
+		m.addAttribute("ind",indlist);
+		return "maintainDistributorIndent";
+		
+	}
 }

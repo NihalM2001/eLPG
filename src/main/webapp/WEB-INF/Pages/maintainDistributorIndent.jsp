@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="jakarta.tags.core" prefix="c" %>
 
 <!--Contact-->
 <!--Maintain Distributor Indent-->
@@ -351,17 +352,18 @@
             <th scope="col">Username</th>
             <th scope="col">Location</th>
             <th scope="col">Count</th>
-            <th style="text-align:center;">Status</th>
+            <th>Status</th>
             <th></th>
             
           </tr>
         </thead>
         <tbody>
+        <c:forEach var="indent" items="${ind}">
           <tr>
 
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>${indent.username}</td>
+            <td>${indent.location }</td>
+            <td>${indent.count}</td>
              
             <td>
               <select name="status" id="">
@@ -374,6 +376,10 @@
             <td><input type="submit" value="Approve"></td>
             
           </tr>
+          </c:forEach>
+          </tbody>
+          </table>
+          </div>
 
 
   </main><!-- End #main -->
